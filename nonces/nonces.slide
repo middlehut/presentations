@@ -1,0 +1,30 @@
+Client / Server Nonce
+
+Lyuben Penkovski
+@__middlehut__
+
+* Client Side Password Hashing
+
+Pros
+- plaintext password never leaves the client
+
+Cons
+- more logic in client (javascript, algo, power)
+
+* What is nonce?
+
+Unique value chosen by entity in a protocol
+
+Protects _that_ entity from *replay* attacks
+
+* Protocol example #1
+
+Server send random challenge to the client: 
+
+`server --- c ---> client`
+
+Client responds with H ( c || p ):
+
+`client --- H(c||p) ---> server`
+
+Server recomputes H(c||p) and checks if they match.

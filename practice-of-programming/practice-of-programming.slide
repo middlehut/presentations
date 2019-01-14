@@ -1,0 +1,144 @@
+The Practice of Programming
+
+Brian Kernighan
+Rob Pike
+1999
+
+* Chapter 1: Style
+
+*Names*
+
+- Use descriptive (longer) names for globals, short names for locals
+- Naming conventions are very useful no matter which is chosen
+- Use active names for functions - e.g. setSomething, parseSomething
+- Use consistent identation and brace style
+- Give names to magic numbers
+
+* Chapter 1: Style
+
+*Comments*
+
+- Don't comment bad code, rewrite it
+- Don't contradict the code with comments
+- Clarify, don't confuse
+
+* Chapter 2: Alogirthms and Data structures
+
+Array, List, Tree, HashMap
+
+* Chapter 3: Design and Implementation
+
+Show me your flowcharts and conceal your tables. and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious. 
+
+_Frederick_P.Brooks,_The_Mythical_Man_Month_
+
+* Chapter 4: Interfaces
+
+*Hide*implementation*details*
+
+The implementation behind the interface should be hidden from the rest of the program so it can be changed without affecting or breaking anything.
+
+* Chapter 4: Interfaces
+
+*Avoid*global*variables*
+
+Wherever possible it is better to pass references to all data through function arguments.
+
+* Chapter 4: Interfaces 
+
+*Don't*reach*behind*user's*back*
+
+A library function should not write secret files and variables or change global data.
+
+A library function should be circumspect about modifying data in its caller.
+
+Example: *strtok* which writes null bytes into the middle of its input string.
+
+* Chapter 4: Interfaces 
+
+*Resource*management*
+
+Free a resource in the same layer that allocated it
+
+* Chapter 4: Interfaces 
+
+*Handle*errors*
+
+- Detect errors at a low level, handle them at high level
+- In most cases, the caller should determine how to handle an error, not the callee. 
+
+* Chapter 5: Debugging
+
+Why should software be so hard?
+
+* Chapter 5: Debugging
+
+*Debuggers*
+
+The authors' personal choice is to rarely use debuggers. 
+
+They prefer thinking harder about the possible problem and use print statements where appropriate.
+
+* Chapter 5: Debugging
+
+*Debug*it*now,*not*later*
+
+Don't ignore a crash when it happens; track it down right away, since it may not happen again until it's too late.
+
+* Chapter 5: Debugging
+
+*Explain*your*code*to*someone*else*
+
+Sometimes it takes no more than a few sentences, followed by an embarrassed "Never mind, I see what's wrong. Sorry to bother you."
+
+* Chapter 6: Testing
+
+Testing is a determined, systematic attempt to break a program that you think is working.
+
+Testing can demonstrate the presence of bugs, but not their absence.
+
+* Chapter 6: Testing
+
+*Program*defensively*
+
+For example, check if input parameters are valid, even though it doesn't seem logically possible for them to be invalid.
+
+* Chapter 7: Performance
+
+The first principle of optimization is _don't_.
+
+Is the program good enough already, is there any benefit to making it faster?
+
+* Chapter 7: Performance
+
+Once you have chosen the right algorithm, performance optimization is generally the last thing to worry about as you write a program.
+
+* Chapter 7: Performance
+
+*Timing*and*Profiling*
+
+* Chapter 7: Performance
+
+*Strategies*for*Speed*
+
+Use a better algorithm or data structure.
+
+Enable compiler optimizations.
+
+Tune the code.
+
+Don't optimize what doesn't matter.
+
+* Chapter 8: Portability
+
+* Chapter 9: Notation
+
+- Formatting Data (printf)
+- Regular Expressions (grep)
+- Programmable Tools (awl, perl, tcl)
+- Interpreters, Compilers and Virtual Machines
+
+* Chapter 9: Notation
+
+
+
